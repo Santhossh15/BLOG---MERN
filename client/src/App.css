@@ -41,7 +41,7 @@ div.post div.texts h2 {
 div.post p.info {
   margin: 6px 0;
   color: #888;
-  font-size: 7rem;
+  font-size: 14px;
   font-weight: bold;
   display: flex;
   gap: 10px;
