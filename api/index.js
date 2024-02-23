@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { default: mongoose } = require("mongoose");
+const { mongoose } = require("mongoose")();
 const User = require('./models/User')
 const app = express();
 const bcrypt = require("bcryptjs");
@@ -31,12 +31,15 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    const userDoc = User.findOne({ username });
+    const userDoc = await User.findOne({ username });
     const passOk = bcrypt.compareSync(password, userDoc.password)
     if (passOk) {
         jwt.sign({ username, id: userDoc._id, secret }, {}, (err, token) => {
             if (err) throw err;
-            res.cookie("token", token).json(ok);
+            res.cookie("token", token).json({
+                id: userDoc._id,
+                username,
+            });
         })
     }
     else {
@@ -53,7 +56,7 @@ app.get('/profile', (req, res) => {
 })
 
 app.post('/logout', (req, res) => {
-    res.cookie('token', '').json("ok");
+    res.clearCookie('token').json('ok');
 })
 
 app.listen(4000);
