@@ -1,24 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main>
+      <header>
+        <a href="" classname="logo">MyBlog</a>
+        <nav>
+          <a href="">Login</a>
+          <a href="">Register</a>
+        </nav>
       </header>
-    </div>
+      <div className="post">
+        <div className="image">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/02/section3b-headset.webp?w=990&crop=1" alt="" />
+        </div>
+        <div className="texts">
+          <h2>Sony's PS VR2 is getting compatibility, possibly by end of year</h2>
+          <p className="info">
+            <a className="author">Santhossh</a>
+            <time>2024-02-23 09:00</time>
+          </p>
+          <p className="summary">PlayStation VR often gets overlooked in conversations about mixed reality. These days, it seems all anyone wants to talk about is Apple Vision Pro versus Meta Quest. But Sony has been an enduring presence in VR for years now, throughout the industry’s various ups and downs (mostly downs, if we're being honest here).</p>
+        </div>
+      </div>
+      <div className="post">
+        <div className="image">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/02/section3b-headset.webp?w=990&crop=1" alt="" />
+        </div>
+        <div className="texts">
+          <h2>Sony's PS VR2 is getting compatibility, possibly by end of year</h2>
+          <p className="info">
+            <a className="author">Santhossh</a>
+            <time>2024-02-23 09:00</time>
+          </p>
+          <p className="summary">PlayStation VR often gets overlooked in conversations about mixed reality. These days, it seems all anyone wants to talk about is Apple Vision Pro versus Meta Quest. But Sony has been an enduring presence in VR for years now, throughout the industry’s various ups and downs (mostly downs, if we're being honest here).</p>
+        </div>
+      </div>
+      <div className="post">
+        <div className="image">
+          <img src="https://techcrunch.com/wp-content/uploads/2024/02/section3b-headset.webp?w=990&crop=1" alt="" />
+        </div>
+        <div className="texts">
+          <h2>Sony's PS VR2 is getting compatibility, possibly by end of year</h2>
+          <p className="info">
+            <a className="author">Santhossh</a>
+            <time>2024-02-23 09:00</time>
+          </p>
+          <p className="summary">PlayStation VR often gets overlooked in conversations about mixed reality. These days, it seems all anyone wants to talk about is Apple Vision Pro versus Meta Quest. But Sony has been an enduring presence in VR for years now, throughout the industry’s various ups and downs (mostly downs, if we're being honest here).</p>
+        </div>
+      </div>
+
+    </main>
   );
 }
 
